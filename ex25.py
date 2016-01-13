@@ -39,5 +39,4 @@ def print_first_and_last_sorted(sentence):
 # How to create python script as module.
 # How to import python script as module.
 # How to call functions from the script after import as module.
-# Got new inbuilt functions like split, sorted, pop.
-# Python created pyc(python compile file) file.
+# Get familiar with inbuilt functions like split, sorted, pop.
