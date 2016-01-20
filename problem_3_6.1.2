@@ -1,0 +1,27 @@
+def unflatten_dict(a, result=None):
+    """Flattens a nested list.
+
+        >>> {'a': 1, 'b': {'x': 2, 'y': 3}, 'c': 4}
+        {'a': 1, 'b': {'x': 2, 'y': 3}, 'c': 4}
+    """
+    if result is None:
+        result = {}
+
+    for x, y in a.items():
+        print x
+        print y
+        if "b" in x:
+            key = x.split()
+
+        print key
+        else:
+           result[x] = y 
+
+    return result
+
+nested_list = {'a': 1, 'b.x': 2, 'b.y': 3, 'c': 4}
+result = unflatten_dict(nested_list)
+print result
+
+
+# Problem 2: Write a function unflatten_dict to flatten a nested dictionary by joining the keys with . character.
