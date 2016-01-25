@@ -1,0 +1,6 @@
+Notes on the availability of these functions:
+
+The design of all built-in operating system dependent modules of Python is such that as long as the same functionality is available, it uses the same interface; for example, the function os.stat(path) returns stat information about path in the same format (which happens to have originated with the POSIX interface).
+Extensions peculiar to a particular operating system are also available through the os module, but using them is of course a threat to portability.
+An “Availability: Unix” note means that this function is commonly found on Unix systems. It does not make any claims about its existence on a specific operating system.
+If not separately noted, all functions that claim “Availability: Unix” are supported on Mac OS X, which builds on a Unix core.
