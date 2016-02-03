@@ -3,9 +3,6 @@ from validate_email import validate_email
 
 class Input(object):
 
-    def __init__(self):
-        self.tangerine = "And now a thousand years between"
-
     def input_email(self):
         email = raw_input("Email: ")
         is_valid = validate_email(email,verify=True)
@@ -23,6 +20,19 @@ class Input(object):
             self.input_password()
         else:
             return password
+
+    def getProcessInputs(self):
+
+        Useremail = self.input_email()
+        password = self.input_password()
+        return Useremail, password
+
+    def getUserTimeFrame(self):
+        
+        days = int(raw_input("Enter Time Duration in Days: "))
+        print "\nPlease wait ...processing\n"
+        return days
+
 
 
 
