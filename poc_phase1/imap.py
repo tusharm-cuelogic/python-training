@@ -10,14 +10,14 @@ def userLogin():
 
 	mail = imaplib.IMAP4_SSL('imap.gmail.com')
 
-	try:
-		mail.login(Useremail, password)
-		mail.list()
-		days = userInputs.getUserTimeFrame()
-		processEmailsInfo(mail, days)
-	except Exception:
-		print "[AUTHENTICATIONFAILED] Invalid credentials"
-		userLogin()
+	#try:
+	mail.login(Useremail, password)
+	mail.list()
+	days = userInputs.getUserTimeFrame()
+	processEmailsInfo(mail, days)
+	#except Exception:
+		#print "[AUTHENTICATIONFAILED] Invalid credentials"
+		#userLogin()
 
 
 def processEmailsInfo(mail, days):
